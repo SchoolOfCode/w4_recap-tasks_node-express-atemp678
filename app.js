@@ -33,7 +33,7 @@ app.get("/users/:id", async function (req, res) {
 
 app.post("/users", async function (req, res) {
   let createUserNew = req.body;
-  users = await createUser();
+  createUserNew = await createUser();
   res.json({
     success: true,
     payload: createUserNew,
