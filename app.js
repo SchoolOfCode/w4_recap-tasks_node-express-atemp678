@@ -48,7 +48,7 @@ app.put("/users/:id", async function (req, res) {
   });
 });
 
-app.delete("/user/:id", async function (req, res) {
+app.delete("/users/:id", async function (req, res) {
   const deletedUser = await deleteUserByID(req.params.id);
   res.json({
     success: true,
