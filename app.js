@@ -1,5 +1,7 @@
 import express from "express";
+
 import users from "./data/users.js";
+
 import {
   getUserByID,
   getUsers,
@@ -30,11 +32,11 @@ app.get("/users/:id", async function (req, res) {
 });
 
 app.post("/users", async function (req, res) {
-  let createUser = req.body;
+  let createUserNew = req.body;
   users = await createUser();
   res.json({
     success: true,
-    payload: newUser,
+    payload: createUserNew,
   });
 });
 
